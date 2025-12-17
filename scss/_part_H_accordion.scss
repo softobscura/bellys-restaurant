@@ -1,0 +1,217 @@
+@import 'utilities/_variables';
+
+.main:before {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:-1;
+	content:'';
+	background:-webkit-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:-moz-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:-o-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+}
+
+.site-header-wrap {
+	margin-bottom:60px;
+	border-bottom:1px solid #cd9ad6;
+}
+
+/*------------------------------------*\
+-------- DEMO Code: accordion
+\*------------------------------------*/
+/*----- Accordion -----*/
+.accordion, .accordion * {
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+
+.accordion {
+	overflow:hidden;
+	box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+	border-radius:3px;
+	background:#f7f7f7;
+	//background: $faintyellow;
+}
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+	width:100%;
+	padding:15px;
+	display:inline-block;
+	border-bottom:1px solid #1a1a1a;
+	background: $aubergine;
+	transition:all linear 0.15s;
+	/* Type */
+	font-size:1.200em;
+	text-shadow:0px 1px 0px #1a1a1a;
+	color: $white;
+	font-family: $font-family-primary;
+	text-decoration: none;
+	text-align: center;
+	//@include clearfix; 
+}
+
+.accordion-section-title.active, .accordion-section-title:hover {
+	background: $cherrywood;
+	/* Type */
+	text-decoration:none;
+	color: $drover;
+}
+
+.accordion-section:last-child .accordion-section-title {
+	border-bottom:none;
+}
+
+/*----- Section Content -----*/
+.accordion-section-content {
+	padding: 15px;
+	display:none;
+}
+
+// Menu
+.main {
+	margin-top: 10px;
+}
+
+.accordion-section-content .menu-bullet {
+	//color: $cherrywood !important;
+	//color: #D3D3D3 !important;
+	font-weight: bold;
+}
+
+.menu-title-styles {
+	text-align: center !important;
+}
+
+ h2.menu-title-styles {
+	font-size: 1.375em;
+	@include breakpoint($breakpoint-level-3) {
+			font-size: 1.5em;
+	}
+}
+
+p.menu-title-styles {
+	font-size: .85em;
+	@include breakpoint($breakpoint-level-3) {
+			font-size: 1em;
+	}
+}
+
+
+div.accordion-section-content h3 {
+	margin-top: -3px;
+	text-align: center;
+	line-height: 1.75em;
+	font-family: $font-family-secondary; //!important;
+	font-size: 1em;
+		@include breakpoint($breakpoint-level-3) {
+			font-size: 1.125em;
+	}
+		@include breakpoint($breakpoint-level-4) {
+			font-size: 1.25em;
+	}
+}
+
+div.accordion-section-content p {
+	margin-top: 0px;
+	text-align: center;
+	font-size: 1em;
+	color: $gray-medium-darker;
+		@include breakpoint($breakpoint-level-3) {
+			font-size: 1em;
+	}
+		@include breakpoint($breakpoint-level-4) {
+			font-size: 1em;
+	}
+}
+
+.menu-bullet {
+	opacity: .4;
+	// font-size: 1.5em;
+	// line-height: 4em;
+	// display: inline-block;
+	//padding-top: 15px;
+}
+
+.package-heading {
+	text-align: center;
+}
+
+.package-margin-padding {
+	line-height: 1.75em !important;
+	height: auto;
+	width: auto;
+	display: block;
+}
+
+.package-underline {
+	//@include clearfix;
+	//background-color: cyan;
+	//line-height: 50px !important;
+	//margin-top: 100px;
+	display: block;
+	height: 50px;
+	width: 100%;
+	padding-top: 10px !important;
+	border-bottom: 1px solid $light-gray;
+}
+
+
+// div.accordion-section-content {
+	
+// 	//font-size: .85em;
+// 		@include breakpoint($breakpoint-level-3) {
+// 			font-size: 1em;
+// 	}
+// }
+
+//Font Awesome
+.fs-padding-l, .fs-padding-r {
+	margin-top: 2px;
+	font-size: 1.25em !important;
+	//@include clearfix;
+	//display: block;
+	//line-height: 1em;
+}
+
+.fs-padding-r {
+	padding-right: 10px;
+	//opacity: 0.1;
+	float: left;
+	//color: $cherrywood;
+}
+
+.fs-padding-l {
+	padding-left: 10px;
+	//height: auto;
+	float: right;
+	//display: block;
+
+	//opacity: 0.1;
+}
+
+.para-bold {
+	font-weight: bold;
+}
+
+.p-spacing {
+	padding-bottom: 15px !important;
+}
+
+// .ast-long {
+// 	@media screen and (max-width: 489px) {
+// 		width: 100px;
+// 		margin: 0 auto;
+// 		//display: block;
+// 		background-color: cyan;
+// 		@include clearfix;
+// 	}
+// }
+
+// .fs-padding-r:hover {
+// 	transform: rotate(180deg);
+// }

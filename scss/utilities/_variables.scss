@@ -1,0 +1,258 @@
+@import 'breakpoint';
+@import 'compass';
+@import 'susy';
+
+// TYPOGRAPHY
+$font-family-primary: 'Playfair Display', serif;
+$font-family-secondary:  'Open Sans', fallback sans-serif;
+$font-family-tertiary: 'Libre Baskerville', serif;
+$font-family-quaternary: 'Libre Baskerville', serif;
+$font-family-five: 'Fjalla One', sans-serif;
+$pf-display1: 'Playfair Display', serif;
+
+// Final Colours!!! // 
+//$aubergine: maroon;//#460c09;// ; // Primary Color, dark brown shade maroon
+$aubergine: #460c09;// ; // Primary Color, dark brown shade maroon
+$drover: #fdf7b3; // Secondary Color, light cream
+$drover_a1: #faf29d;
+//$drover_light_1: ;
+$cherrywood: #6b1617; // brown main color
+$orangegrass: #dab827; // orange!!!
+$cream: #fffcd5; // cream!!!
+$faintyellow: #fcfbe4;
+$putty:#e8d794; // normal beige
+$raffia: #ebe1b9; // light beige
+
+// $rosewood: #540000; // brown main color NO
+// $buttercup: #eea814; // orange complementary
+$punga: #4a3012; // dark brown
+$comple1: #444040;
+$comple2: #444040;
+
+// Color Theme
+$antique-brass: #c9915e; // the sharpened part of the eraser
+$buttercup:     #f3a61e; // body of the pencil, actual color of the pencil itself
+// $cream:         #fffcd5; // good for background colors
+$froly:         #f26f6f; // the color of the eraser, previous colour was 
+						 // #f45357
+$masala:        #444240; // the lead or the sharpened part
+
+$marigold:      #b8822c; // metal part close to the eraser
+$marigold-d1:	shade($marigold, 10%);
+$marigold-d2:	shade($marigold, 15%);
+
+$marigold-l1:	lighten($marigold, 5%);	 //
+$marigold-l2:	lighten($marigold, 10%);
+$marigold-l3: lighten($marigold, 20%);
+
+$marigold-s1: lighten(#d49e49, 5%);
+$marigold-s2: lighten(#d49e49, 10%);
+
+$mid-gray:      #636467; // medium gray value, maybe for captions or small lines of text;
+$white:         #ffffff; // white
+$black:         #000000; // black
+
+// Color Common Text
+$black: 		#000000;
+$gray-medium: 	#939598; // Most Used!!!
+$gray-medium-darker: shade($gray-medium, 32%);
+$gray-light: 	#c7c8ca;
+$white: 		#ffffff;
+$light-gray: 	#e2e2e2;
+$gray1: #2b1b17;
+
+// Data Direct Australia
+$dda-gray: 			#c7c8ca;
+$dda-red:			#990033;
+$dda-background: 	#e2e2e2;
+
+//Numbers
+$add-height-1: 50px;
+
+// Other Colors
+$etsy1: #db6e07;
+$etsy2: rgb(204,76,8);;
+$opacity-block-1: rgba(150, 75, 75, .2);
+$gr-background: #323133;
+$gr-background-2: #0b5a86;
+
+// Breakpoint or Media Queries
+$breakpoint-max-width-1: max-width 767px; // Max Width of 600px
+$breakpoint-min-width-1: min-width 767px; // Max Width of 600p
+$breakpoint-level-1: 321px;		// 321px to 480px
+$breakpoint-level-1A: 360px;
+$breakpoint-level-1B: 404px;
+$breakpoint-level-2: 481px; 	// 481px to 767px
+$breakpoint-level-2A: 490px;
+// $breakpoint-level-2a1: 640px;
+$breakpoint-level-2B: 681px;
+$breakpoint-level-3: 768px; 	// 768px to 1023px, at 768px, the 768px continer kicks in
+$breakpoint-level-4: 1024px;	// 1025px and up
+
+@include border-box-sizing;
+
+// Susy
+$susy: (
+  // columns: 16, 
+  // debug: (image: show),
+  // gutters: 1/2,
+  math: fluid,
+  global-box-sizing: border-box,
+  key: value,
+  output: overlay,
+  use-custom: (rem: true)
+);
+
+///////////////////////////////
+///// Clearfix
+//////////////////////////////
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+///////////////////////////////
+///// Media Queries Shortcuts
+//////////////////////////////
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 489px) {
+
+}
+@media screen and (min-width: 490px) and (max-width: 767px) {
+  
+}
+
+// Services Styles
+
+// .section-content-services-list {
+// 	@include section-paragraph;
+// 	@include font-primary;
+// 	color: $gray-medium-darker;
+//    	line-height: 1.25em;
+// 	//list-style: none;
+//    	//margin-left: 0;
+//    	//padding-left: 2em;
+//    	//text-indent: -1em;
+// }   	
+
+// .scslist-icon-color {
+// 	// color: $marigold;
+// 	// color: $marigold-l3;
+// 	color: $gray-light;
+// }
+
+// // Link Styles
+// .section-content-aside a.download-link {
+// 	//font-family: $font-family-secondary;
+// 	//text-transform: uppercase;
+// 	text-decoration: none;
+// 	// color: $gray-medium-darker;
+// 	// color: $marigold;
+// 	color: $marigold-d1;
+// 	font-size: .875em;
+// }
+
+// .download-link:hover {
+// 	// border-bottom: .75px solid $dda-red;
+// 	border-bottom: .75px solid $marigold-d2;
+// }
+
+// aside.section-content-aside p a.highlight-paragraph {
+// 	color: $marigold-d2;
+// }
+
+// aside.section-content-aside p a.highlight-paragraph:hover {
+// 	border-bottom: .75px solid $marigold-d2;
+// }
+
+// .copyright-final {
+// 	// @include font-quaternary;
+// 	font-size: 12px !important;
+// 	line-height: 1.5em !important;
+// }
+
+// @media screen and (min-width: 767px) and (max-width: 1023px) {
+// 	  .portfolio-tablet-view {
+// 		font-size: 1.25em !important;
+// 	}
+// }
+
+// .gallery-caption {
+// 	// @include font-quaternary;
+// 	// font-family: $font-family-quaternary !important;
+// 	text-align: center !important;
+// 	padding: 0;
+// 	margin: 4px 0 0 0;
+// 	font-size: .85em;
+// 		@include breakpoint($breakpoint-level-1) {
+// 			font-size: .85em;
+// 	}
+// 		@include breakpoint($breakpoint-level-2) {
+// 			font-size: .85em;
+// 	}
+// 		@include breakpoint($breakpoint-level-3) {
+// 			font-size: .95em;
+// 	}
+// 		@include breakpoint($breakpoint-level-4) {
+// 			font-size: .95em;
+// 			//color: blue;
+// 	}
+// }
+
+/*
+// Aside Content
+.sub-headline-style {
+      // background-color: rgba(111, 242, 16, 0.2);
+      // position: relative;
+      // z-index: 200;
+      // animation-name: fontcolor;
+      // animation-duration: 4s;
+      // animation-iteration-count: infinite;
+      // font-family: 'questa_granderegular', fallback serif;
+      // font-family: 'Libre Baskerville', serif;
+      // font-weight: 400;
+      // font-style: italic;
+      // font-family: 'PT Serif', serif;
+      // font-family: 'Georgia', fallback serif;
+      // letter-spacing: .5px;
+      // color: $gray-medium;
+      // @include font-quaternary;
+      @include margin-padding-zero;
+      @include clearfix;
+      display: none;
+        @include breakpoint($breakpoint-level-1) {
+          display: none;
+        }
+        @include breakpoint($breakpoint-level-3) {
+          // margin-bottom: 15px;
+          // top: -45px;
+          // position: relative;
+          // float: right;
+          // margin-bottom: -30px;
+          // margin-left: span(1 of 14) + gutter(14);
+          // margin-right: span(1 of 14) + gutter(14);
+          // display: block;
+          width: span(12 of 14);
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 1.375em;
+          text-align: right;
+        }
+        @include breakpoint($breakpoint-level-4) {
+          // margin-bottom: 20px;
+          // margin-top: 160px;
+          // margin-left: span(1 of 16) + gutter(16);
+          // margin-right: span(1 of 16) + gutter(16);
+          // margin: 0 auto;
+          width: span(14 of 16);
+          font-size: 1.5em;
+      }
+}
+
+.section-content-image-holder {
+    position: relative;
+    z-index: -1;
+}
+*/

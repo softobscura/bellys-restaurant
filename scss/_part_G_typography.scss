@@ -1,0 +1,93 @@
+@import 'utilities/_variables';
+
+html, body {
+	font-family: $font-family-secondary;
+}
+
+//Primary
+h1, h2, h3, h4, h5, h6 {
+	@include font-headings;
+	@include margin-padding-zero;
+	color: $aubergine;
+}
+
+// Secondary
+p {
+	@include font-body-light;
+	// @include margin-padding-zero;
+	// @include section-paragraph;
+	// @include section-spacing-paragraph;
+}
+
+section h2 {
+	margin-top: 20px;
+	@media screen and (max-width: 480px) {
+		// text-align: center;
+	}
+}
+
+section p {
+	@include font-body;
+	@include margin-padding-zero;
+	@include section-paragraph;
+	// @include section-spacing-paragraph;
+	color: $gray-medium-darker;
+}
+
+// Content
+ 
+section.content-main h3 {
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+section.content-main h2 {
+	padding-bottom: 10px;
+	text-align: center;
+	@media screen and (min-width: 768px) {
+		text-align: left;
+	}
+}
+
+section.content-main p {
+	@include font-body;
+	@include margin-padding-zero;
+	@include section-paragraph;
+}
+
+.bolden {
+	@include font-bolden;
+}
+
+div.store-hours-all table {
+	@include margin-padding-zero;
+	@include section-paragraph;
+	@include font-body;
+	color: $gray-medium-darker;
+}
+
+@media screen and (max-width: 767px) {
+	// .content-main h2 p {
+	// 	text-align: justify !important;
+	// }
+
+	.j-text {
+		text-align: justify !important;
+	}
+}
+
+.disclaimer {
+	margin-top: 20px !important;
+	font-size: 12px !important;
+	text-align: justify !important;
+}
+// About
+
+// Content Table
+// section.content-main div.address {
+// 	@include font-body;
+// 	@include section-paragraph;
+// 	color: $gray-medium-darker;
+// }
+
+

@@ -1,0 +1,102 @@
+@import 'utilities/_variables';
+
+// Header Height
+header {
+	height: 85px;
+	@include breakpoint(min-width 480px) {
+		height: 90px;
+	}
+	@include breakpoint(min-width 540px) {
+		height: 95px;
+	}
+	@include breakpoint(min-width 768px) {
+		height: 100px;
+	}
+}
+
+header {
+	//position: fixed;
+	//top: 0;
+	@include clearfix;
+	width: 100%;
+	background-color: $aubergine;
+	display: block;
+	@include breakpoint(min-width 1024px) {
+		height: 120px !important;
+	}
+}
+
+header p {
+	// background-color: pink;
+	color: $white !important;
+	text-decoration: none !important;
+	text-align: right;
+	font-size: .75em;
+	margin-top: 25px;
+	margin-right: 20px;
+	width: 170px;
+	float: right;
+	@include breakpoint(min-width 480px) {
+		//margin-top: 40px;
+		margin-top: 30px;
+		font-size: .85em;
+		width: 200px;
+	}
+	@include breakpoint(min-width 540px) {
+		margin-top: 30px;
+		width: 200px;
+	}
+	@include breakpoint(min-width 768px) {
+		//margin-top: 45px;
+		font-size: .95em;
+		width: auto;
+	}
+	@include breakpoint(min-width 1024px) {
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+}
+
+.header-logo-style {
+	text-decoration: none;
+}
+
+.bellys-logo {
+	// display: none;
+	// visibility: hidden;
+	width: 90px;
+	height: auto;
+	margin: 20px 0 15px 20px;
+	@include breakpoint(min-width 480px) {
+		margin: 20px 0 15px 25px;
+		width: 100px;
+	}
+	@include breakpoint(min-width 1024px) {
+		margin: 18px 0 15px 30px;
+		width: 140px;
+	}
+}
+
+.header-message {
+	display: none;
+	@include breakpoint(min-width 768px) {
+		@include font-body-ital2;
+		display: block;
+		//font-size: 1.25em;
+	}
+}
+
+.header-loc {
+	@include font-headings;
+	@include breakpoint(min-width 768px) {
+		letter-spacing: 1px;
+		//text-transform: uppercase;
+	}
+
+}
+
+.header-loc-padding {
+	@include breakpoint(min-width 768px) {
+		padding-left: 10px;
+	}
+}
